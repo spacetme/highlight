@@ -1,0 +1,4980 @@
+.hl-s-default {
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #F0F0F0;
+}
+
+.hljs,
+.hljs-subst,
+.hljs-tag .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title {
+  color: black;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-constant,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-rules .hljs-value .hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.haml .hljs-symbol,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-aggregate,
+.hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.tex .hljs-special,
+.erlang_repl .hljs-function_or_atom,
+.asciidoc .hljs-header,
+.markdown .hljs-header,
+.coffeescript .hljs-attribute {
+  color: #800;
+}
+
+.smartquote,
+.hljs-comment,
+.hljs-annotation,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-chunk,
+.asciidoc .hljs-blockquote,
+.markdown .hljs-blockquote {
+  color: #888;
+}
+
+.hljs-number,
+.hljs-date,
+.hljs-regexp,
+.hljs-literal,
+.hljs-hexcolor,
+.smalltalk .hljs-symbol,
+.smalltalk .hljs-char,
+.go .hljs-constant,
+.hljs-change,
+.lasso .hljs-variable,
+.makefile .hljs-variable,
+.asciidoc .hljs-bullet,
+.markdown .hljs-bullet,
+.asciidoc .hljs-link_url,
+.markdown .hljs-link_url {
+  color: #080;
+}
+
+.hljs-label,
+.hljs-javadoc,
+.ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-important,
+.hljs-pseudo,
+.hljs-pi,
+.haml .hljs-bullet,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-formula,
+.erlang_repl .hljs-reserved,
+.hljs-prompt,
+.asciidoc .hljs-link_label,
+.markdown .hljs-link_label,
+.vhdl .hljs-attribute,
+.clojure .hljs-attribute,
+.asciidoc .hljs-attribute,
+.lasso .hljs-attribute,
+.coffeescript .hljs-property,
+.hljs-phony {
+  color: #88F
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-title,
+.hljs-built_in,
+.hljs-aggregate,
+.css .hljs-tag,
+.hljs-javadoctag,
+.hljs-phpdoc,
+.hljs-yardoctag,
+.smalltalk .hljs-class,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.go .hljs-typename,
+.tex .hljs-command,
+.asciidoc .hljs-strong,
+.markdown .hljs-strong,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.asciidoc .hljs-emphasis,
+.markdown .hljs-emphasis {
+  font-style: italic;
+}
+
+.nginx .hljs-built_in {
+  font-weight: normal;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.lasso .markup,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-dark {
+﻿/*
+
+Dark style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #444;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special {
+  color: white;
+}
+
+.hljs,
+.hljs-subst {
+  color: #DDD;
+}
+
+.hljs-string,
+.hljs-title,
+.haskell .hljs-type,
+.ini .hljs-title,
+.hljs-tag .hljs-value,
+.css .hljs-rules .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.ruby .hljs-string,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.coffeescript .hljs-attribute {
+  color: #D88;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #777;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-title,
+.css .hljs-id,
+.hljs-phpdoc,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-far {
+/*
+
+FAR Style (c) MajestiC <majestic2k@gmail.com>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #000080;
+}
+
+.hljs,
+.hljs-subst {
+  color: #0FF;
+}
+
+.hljs-string,
+.ruby .hljs-string,
+.haskell .hljs-type,
+.hljs-tag .hljs-value,
+.css .hljs-rules .hljs-value,
+.css .hljs-rules .hljs-value .hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-addition,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.clojure .hljs-title,
+.coffeescript .hljs-attribute {
+  color: #FF0;
+}
+
+.hljs-keyword,
+.css .hljs-id,
+.hljs-title,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.xml .hljs-tag .hljs-title,
+.hljs-winutils,
+.hljs-flow,
+.hljs-change,
+.hljs-envvar,
+.bash .hljs-variable,
+.tex .hljs-special,
+.clojure .hljs-built_in {
+  color: #FFF;
+}
+
+.hljs-comment,
+.hljs-phpdoc,
+.hljs-javadoc,
+.java .hljs-annotation,
+.hljs-template_comment,
+.hljs-deletion,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #888;
+}
+
+.hljs-number,
+.hljs-date,
+.hljs-regexp,
+.hljs-literal,
+.smalltalk .hljs-symbol,
+.smalltalk .hljs-char,
+.clojure .hljs-attribute {
+  color: #0F0;
+}
+
+.python .hljs-decorator,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.xml .hljs-pi,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-shebang,
+.nginx .hljs-built_in,
+.hljs-prompt {
+  color: #008080;
+}
+
+.hljs-keyword,
+.css .hljs-id,
+.hljs-title,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.hljs-winutils,
+.hljs-flow,
+.apache .hljs-tag,
+.nginx .hljs-built_in,
+.tex .hljs-command,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+}
+.hl-s-idea {
+/*
+
+Intellij Idea-like styling (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #000;
+  background: #fff;
+}
+
+.hljs-subst,
+.hljs-title {
+  font-weight: normal;
+  color: #000;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc,
+.diff .hljs-header {
+  color: #808080;
+  font-style: italic;
+}
+
+.hljs-annotation,
+.hljs-decorator,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-doctype,
+.hljs-pi,
+.hljs-chunk,
+.hljs-shebang,
+.apache .hljs-cbracket,
+.hljs-prompt,
+.http .hljs-title {
+  color: #808000;
+}
+
+.hljs-tag,
+.hljs-pi {
+  background: #efefef;
+}
+
+.hljs-tag .hljs-title,
+.hljs-id,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-literal,
+.hljs-keyword,
+.hljs-hexcolor,
+.css .hljs-function,
+.ini .hljs-title,
+.css .hljs-class,
+.hljs-list .hljs-title,
+.clojure .hljs-title,
+.nginx .hljs-title,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+  color: #000080;
+}
+
+.hljs-attribute,
+.hljs-rules .hljs-keyword,
+.hljs-number,
+.hljs-date,
+.hljs-regexp,
+.tex .hljs-special {
+  font-weight: bold;
+  color: #0000ff;
+}
+
+.hljs-number,
+.hljs-regexp {
+  font-weight: normal;
+}
+
+.hljs-string,
+.hljs-value,
+.hljs-filter .hljs-argument,
+.css .hljs-function .hljs-params,
+.apache .hljs-tag {
+  color: #008000;
+  font-weight: bold;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-char,
+.tex .hljs-formula {
+  color: #000;
+  background: #d0eded;
+  font-style: italic;
+}
+
+.hljs-phpdoc,
+.hljs-yardoctag,
+.hljs-javadoctag {
+  text-decoration: underline;
+}
+
+.hljs-variable,
+.hljs-envvar,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #660e7a;
+}
+
+.hljs-addition {
+  background: #baeeba;
+}
+
+.hljs-deletion {
+  background: #ffc8bd;
+}
+
+.diff .hljs-change {
+  background: #bccff9;
+}
+}
+.hl-s-sunburst {
+/*
+
+Sunburst-like style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #000; color: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc {
+  color: #aeaeae;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.ruby .hljs-function .hljs-keyword,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #E28964;
+}
+
+.hljs-function .hljs-keyword,
+.hljs-sub .hljs-keyword,
+.method,
+.hljs-list .hljs-title {
+  color: #99CF50;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.tex .hljs-command,
+.coffeescript .hljs-attribute {
+  color: #65B042;
+}
+
+.hljs-subst {
+  color: #DAEFA3;
+}
+
+.hljs-regexp {
+  color: #E9C062;
+}
+
+.hljs-title,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-decorator,
+.hljs-shebang,
+.hljs-prompt {
+  color: #89BDFF;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc {
+  text-decoration: underline;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number {
+  color: #3387CC;
+}
+
+.hljs-params,
+.hljs-variable,
+.clojure .hljs-attribute {
+  color: #3E87E3;
+}
+
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.tex .hljs-special {
+  color: #CDA869;
+}
+
+.css .hljs-class {
+  color: #9B703F;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #C5AF75;
+}
+
+.hljs-rules .hljs-value {
+  color: #CF6A4C;
+}
+
+.css .hljs-id {
+  color: #8B98AB;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9B859D;
+}
+
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #8996A8;
+}
+
+.hljs-hexcolor,
+.css .hljs-value .hljs-number {
+  color: #DD7B3B;
+}
+
+.css .hljs-function {
+  color: #DAD085;
+}
+
+.diff .hljs-header,
+.hljs-chunk,
+.tex .hljs-formula {
+  background-color: #0E2231;
+  color: #F8F8F8;
+  font-style: italic;
+}
+
+.diff .hljs-change {
+  background-color: #4A410D;
+  color: #F8F8F8;
+}
+
+.hljs-addition {
+  background-color: #253B22;
+  color: #F8F8F8;
+}
+
+.hljs-deletion {
+  background-color: #420E09;
+  color: #F8F8F8;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-zenburn {
+/*
+
+Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
+based on dark.css by Ivan Sagalaev
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #3F3F3F;
+  color: #DCDCDC;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.css .hljs-class,
+.css .hljs-id,
+.lisp .hljs-title,
+.nginx .hljs-title,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #E3CEAB;
+}
+
+.django .hljs-template_tag,
+.django .hljs-variable,
+.django .hljs-filter .hljs-argument {
+  color: #DCDCDC;
+}
+
+.hljs-number,
+.hljs-date {
+  color: #8CD0D3;
+}
+
+.dos .hljs-envvar,
+.dos .hljs-stream,
+.hljs-variable,
+.apache .hljs-sqbracket {
+  color: #EFDCBC;
+}
+
+.dos .hljs-flow,
+.diff .hljs-change,
+.python .exception,
+.python .hljs-built_in,
+.hljs-literal,
+.tex .hljs-special {
+  color: #EFEFAF;
+}
+
+.diff .hljs-chunk,
+.hljs-subst {
+  color: #8F8F8F;
+}
+
+.dos .hljs-keyword,
+.python .hljs-decorator,
+.hljs-title,
+.haskell .hljs-type,
+.diff .hljs-header,
+.ruby .hljs-class .hljs-parent,
+.apache .hljs-tag,
+.nginx .hljs-built_in,
+.tex .hljs-command,
+.hljs-prompt {
+    color: #efef8f;
+}
+
+.dos .hljs-winutils,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-string {
+  color: #DCA3A3;
+}
+
+.diff .hljs-deletion,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.hljs-javadoc,
+.smalltalk .hljs-class,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.css .hljs-rules .hljs-value,
+.hljs-attr_selector,
+.hljs-pseudo,
+.apache .hljs-cbracket,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute {
+  color: #CC9393;
+}
+
+.hljs-shebang,
+.diff .hljs-addition,
+.hljs-comment,
+.java .hljs-annotation,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype {
+  color: #7F9F7F;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+}
+.hl-s-vs {
+/*
+
+Visual Studio-like style based on original C# coloring by Jason Diamond <jason@diamond.name>
+
+*/
+.hljs {
+  display: block; padding: 0.5em;
+  background: white; color: black;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-chunk,
+.apache .hljs-cbracket {
+  color: #008000;
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-built_in,
+.smalltalk .hljs-class,
+.hljs-winutils,
+.bash .hljs-variable,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title,
+.xml .hljs-tag,
+.xml .hljs-tag .hljs-value {
+  color: #00f;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-rules .hljs-value .hljs-number,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-aggregate,
+.hljs-template_tag,
+.django .hljs-variable,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.apache .hljs-tag,
+.hljs-date,
+.tex .hljs-formula,
+.coffeescript .hljs-attribute {
+  color: #a31515;
+}
+
+.ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.hljs-preprocessor,
+.hljs-pragma,
+.userType,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #2b91af;
+}
+
+.hljs-phpdoc,
+.hljs-javadoc,
+.hljs-xmlDocTag {
+  color: #808080;
+}
+
+.vhdl .hljs-typename { font-weight: bold; }
+.vhdl .hljs-string { color: #666666; }
+.vhdl .hljs-literal { color: #a31515; }
+.vhdl .hljs-attribute { color: #00B0E8; }
+
+.xml .hljs-attribute { color: #f00; }
+}
+.hl-s-ascetic {
+﻿/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: white; color: black;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-filter .hljs-argument,
+.hljs-addition,
+.hljs-change,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.nginx .hljs-built_in,
+.tex .hljs-formula {
+  color: #888;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-shebang,
+.hljs-doctype,
+.hljs-pi,
+.hljs-javadoc,
+.hljs-deletion,
+.apache .hljs-sqbracket {
+  color: #CCC;
+}
+
+.hljs-keyword,
+.hljs-tag .hljs-title,
+.ini .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.http .hljs-title,
+.nginx .hljs-title,
+.css .hljs-tag,
+.hljs-winutils,
+.hljs-flow,
+.apache .hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+}
+.hl-s-magula {
+﻿/*
+Description: Magula style for highligh.js
+Author: Ruslan Keba <rukeba@gmail.com>
+Website: http://rukeba.com/
+Version: 1.0
+Date: 2009-01-03
+Music: Aphex Twin / Xtal
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background-color: #f4f4f4;
+}
+
+.hljs,
+.hljs-subst,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: black;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-rules .hljs-value .hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-aggregate,
+.hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-addition,
+.hljs-flow,
+.hljs-stream,
+.bash .hljs-variable,
+.apache .hljs-cbracket,
+.coffeescript .hljs-attribute {
+  color: #050;
+}
+
+.hljs-comment,
+.hljs-annotation,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-chunk {
+  color: #777;
+}
+
+.hljs-number,
+.hljs-date,
+.hljs-regexp,
+.hljs-literal,
+.smalltalk .hljs-symbol,
+.smalltalk .hljs-char,
+.hljs-change,
+.tex .hljs-special {
+  color: #800;
+}
+
+.hljs-label,
+.hljs-javadoc,
+.ruby .hljs-string,
+.hljs-decorator,
+.hljs-filter .hljs-argument,
+.hljs-localvars,
+.hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-envvar,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-formula,
+.hljs-prompt,
+.clojure .hljs-attribute {
+  color: #00e;
+}
+
+.hljs-keyword,
+.hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.hljs-built_in,
+.hljs-aggregate,
+.smalltalk .hljs-class,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.xml .hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+  color: navy;
+}
+
+.nginx .hljs-built_in {
+  font-weight: normal;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+
+/* --- */
+.apache .hljs-tag {
+  font-weight: bold;
+  color: blue;
+}
+
+}
+.hl-s-github {
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8f8
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #998;
+  font-style: italic
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.nginx .hljs-title,
+.hljs-subst,
+.hljs-request,
+.hljs-status {
+  color: #333;
+  font-weight: bold
+}
+
+.hljs-number,
+.hljs-hexcolor,
+.ruby .hljs-constant {
+  color: #099;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #d14
+}
+
+.hljs-title,
+.hljs-id,
+.coffeescript .hljs-params,
+.scss .hljs-preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.clojure .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.vhdl .hljs-literal,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #009926
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.hljs-prompt {
+  color: #990073
+}
+
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
+}
+.hl-s-googlecode {
+/*
+
+Google Code style (c) Aahan Krish <geekpanth3r@gmail.com>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: white; color: black;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc,
+.hljs-comment * {
+  color: #800;
+}
+
+.hljs-keyword,
+.method,
+.hljs-list .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.hljs-tag .hljs-title,
+.setting .hljs-value,
+.hljs-winutils,
+.tex .hljs-command,
+.http .hljs-title,
+.hljs-request,
+.hljs-status {
+  color: #008;
+}
+
+.hljs-envvar,
+.tex .hljs-special {
+  color: #660;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.hljs-regexp,
+.coffeescript .hljs-attribute {
+  color: #080;
+}
+
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-decorator,
+.ini .hljs-title,
+.hljs-shebang,
+.hljs-prompt,
+.hljs-hexcolor,
+.hljs-rules .hljs-value,
+.css .hljs-value .hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.css .hljs-function,
+.clojure .hljs-attribute {
+  color: #066;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.hljs-typename,
+.hljs-tag .hljs-attribute,
+.hljs-doctype,
+.hljs-class .hljs-id,
+.hljs-built_in,
+.setting,
+.hljs-params,
+.hljs-variable,
+.clojure .hljs-title {
+  color: #606;
+}
+
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.hljs-subst {
+  color: #000;
+}
+
+.css .hljs-class,
+.css .hljs-id {
+  color: #9B703F;
+}
+
+.hljs-value .hljs-important {
+  color: #ff7700;
+  font-weight: bold;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #C5AF75;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9B859D;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma {
+  color: #444;
+}
+
+.tex .hljs-formula {
+  background-color: #EEE;
+  font-style: italic;
+}
+
+.diff .hljs-header,
+.hljs-chunk {
+  color: #808080;
+  font-weight: bold;
+}
+
+.diff .hljs-change {
+  background-color: #BCCFF9;
+}
+
+.hljs-addition {
+  background-color: #BAEEBA;
+}
+
+.hljs-deletion {
+  background-color: #FFC8BD;
+}
+
+.hljs-comment .hljs-yardoctag {
+  font-weight: bold;
+}
+}
+.hl-s-brown_paper {
+/*
+
+Brown Paper style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background:#b7a68e url(./brown_papersq.png);
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  color:#005599;
+  font-weight:bold;
+}
+
+.hljs,
+.hljs-subst,
+.hljs-tag .hljs-keyword {
+  color: #363C69;
+}
+
+.hljs-string,
+.hljs-title,
+.haskell .hljs-type,
+.hljs-tag .hljs-value,
+.css .hljs-rules .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.ruby .hljs-string,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-number {
+  color: #2C009F;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in,
+.tex .hljs-formula {
+  color: #802022;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-command {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.8;
+}
+}
+.hl-s-school_book {
+/*
+
+School Book style from goldblog.com.ua (c) Zaripov Yura <yur4ik7@ukr.net>
+
+*/
+
+.hljs {
+  display: block; padding: 15px 0.5em 0.5em 30px;
+  font-size: 11px !important;
+  line-height:16px !important;
+}
+
+pre{
+  background:#f6f6ae url(./school_book.png);
+  border-top: solid 2px #d2e8b9;
+  border-bottom: solid 1px #d2e8b9;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special {
+  color:#005599;
+  font-weight:bold;
+}
+
+.hljs,
+.hljs-subst,
+.hljs-tag .hljs-keyword {
+  color: #3E5915;
+}
+
+.hljs-string,
+.hljs-title,
+.haskell .hljs-type,
+.hljs-tag .hljs-value,
+.css .hljs-rules .hljs-value,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.ruby .hljs-string,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.nginx .hljs-built_in,
+.tex .hljs-command,
+.coffeescript .hljs-attribute {
+  color: #2C009F;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket {
+  color: #E60415;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.xml .hljs-tag .hljs-title,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-ir_black {
+/*
+  IR_Black style (c) Vasily Mikhailitchenko <vaskas@programica.ru>
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #000; color: #f8f8f8;
+}
+
+.hljs-shebang,
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc {
+  color: #7c7c7c;
+}
+
+.hljs-keyword,
+.hljs-tag,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status,
+.clojure .hljs-attribute {
+  color: #96CBFE;
+}
+
+.hljs-sub .hljs-keyword,
+.method,
+.hljs-list .hljs-title,
+.nginx .hljs-title {
+  color: #FFFFB6;
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.coffeescript .hljs-attribute {
+  color: #A8FF60;
+}
+
+.hljs-subst {
+  color: #DAEFA3;
+}
+
+.hljs-regexp {
+  color: #E9C062;
+}
+
+.hljs-title,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-decorator,
+.tex .hljs-special,
+.haskell .hljs-type,
+.hljs-constant,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.nginx .hljs-built_in {
+  color: #FFFFB6;
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.hljs-number,
+.hljs-variable,
+.vbscript,
+.hljs-literal {
+  color: #C6C5FE;
+}
+
+.css .hljs-tag {
+  color: #96CBFE;
+}
+
+.css .hljs-rules .hljs-property,
+.css .hljs-id {
+  color: #FFFFB6;
+}
+
+.css .hljs-class {
+  color: #FFF;
+}
+
+.hljs-hexcolor {
+  color: #C6C5FE;
+}
+
+.hljs-number {
+  color:#FF73FD;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.7;
+}
+}
+.hl-s-solarized_dark {
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #002b36;
+  color: #839496;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-doctype,
+.hljs-pi,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #586e75;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-winutils,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor,
+.hljs-link_url {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-localvars,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.hljs-identifier,
+.vhdl .hljs-literal,
+.hljs-id,
+.css .hljs-function {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.haskell .hljs-type,
+.hljs-link_reference {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword,
+.hljs-pragma,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-subst,
+.hljs-cdata,
+.clojure .hljs-title,
+.css .hljs-pseudo,
+.hljs-header {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-deletion,
+.hljs-important {
+  color: #dc322f;
+}
+
+/* Solarized Violet */
+.hljs-link_label {
+  color: #6c71c4;
+}
+
+.tex .hljs-formula {
+  background: #073642;
+}
+}
+.hl-s-solarized_light {
+/*
+
+Orginal Style from ethanschoonover.com/solarized (c) Jeremy Hull <sourdrums@gmail.com>
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #fdf6e3;
+  color: #657b83;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-doctype,
+.hljs-pi,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #93a1a1;
+}
+
+/* Solarized Green */
+.hljs-keyword,
+.hljs-winutils,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title {
+  color: #859900;
+}
+
+/* Solarized Cyan */
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-rules .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor,
+.hljs-link_url {
+  color: #2aa198;
+}
+
+/* Solarized Blue */
+.hljs-title,
+.hljs-localvars,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.hljs-identifier,
+.vhdl .hljs-literal,
+.hljs-id,
+.css .hljs-function {
+  color: #268bd2;
+}
+
+/* Solarized Yellow */
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.haskell .hljs-type,
+.hljs-link_reference {
+  color: #b58900;
+}
+
+/* Solarized Orange */
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-keyword,
+.hljs-pragma,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-subst,
+.hljs-cdata,
+.clojure .hljs-title,
+.css .hljs-pseudo,
+.hljs-header {
+  color: #cb4b16;
+}
+
+/* Solarized Red */
+.hljs-deletion,
+.hljs-important {
+  color: #dc322f;
+}
+
+/* Solarized Violet */
+.hljs-link_label {
+  color: #6c71c4;
+}
+
+.tex .hljs-formula {
+  background: #eee8d5;
+}
+}
+.hl-s-arta {
+/*
+Date: 17.V.2011
+Author: pumbur <pumbur@pumbur.net>
+*/
+
+.hljs
+{
+  display: block; padding: 0.5em;
+  background: #222;
+}
+
+.profile .hljs-header *,
+.ini .hljs-title,
+.nginx .hljs-title
+{
+  color: #fff;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.hljs-preprocessor,
+.hljs-preprocessor .hljs-title,
+.hljs-pragma,
+.hljs-shebang,
+.profile .hljs-summary,
+.diff,
+.hljs-pi,
+.hljs-doctype,
+.hljs-tag,
+.hljs-template_comment,
+.css .hljs-rules,
+.tex .hljs-special
+{
+  color: #444;
+}
+
+.hljs-string,
+.hljs-symbol,
+.diff .hljs-change,
+.hljs-regexp,
+.xml .hljs-attribute,
+.smalltalk .hljs-char,
+.xml .hljs-value,
+.ini .hljs-value,
+.clojure .hljs-attribute,
+.coffeescript .hljs-attribute
+{
+  color: #ffcc33;
+}
+
+.hljs-number,
+.hljs-addition
+{
+  color: #00cc66;
+}
+
+.hljs-built_in,
+.hljs-literal,
+.vhdl .hljs-typename,
+.go .hljs-constant,
+.go .hljs-typename,
+.ini .hljs-keyword,
+.lua .hljs-title,
+.perl .hljs-variable,
+.php .hljs-variable,
+.mel .hljs-variable,
+.django .hljs-variable,
+.css .funtion,
+.smalltalk .method,
+.hljs-hexcolor,
+.hljs-important,
+.hljs-flow,
+.hljs-inheritance,
+.parser3 .hljs-variable
+{
+  color: #32AAEE;
+}
+
+.hljs-keyword,
+.hljs-tag .hljs-title,
+.css .hljs-tag,
+.css .hljs-class,
+.css .hljs-id,
+.css .hljs-pseudo,
+.css .hljs-attr_selector,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.hljs-winutils,
+.tex .hljs-command,
+.hljs-request,
+.hljs-status
+{
+  color: #6644aa;
+}
+
+.hljs-title,
+.ruby .hljs-constant,
+.vala .hljs-constant,
+.hljs-parent,
+.hljs-deletion,
+.hljs-template_tag,
+.css .hljs-keyword,
+.objectivec .hljs-class .hljs-id,
+.smalltalk .hljs-class,
+.lisp .hljs-keyword,
+.apache .hljs-tag,
+.nginx .hljs-variable,
+.hljs-envvar,
+.bash .hljs-variable,
+.go .hljs-built_in,
+.vbscript .hljs-built_in,
+.lua .hljs-built_in,
+.rsl .hljs-built_in,
+.tail,
+.avrasm .hljs-label,
+.tex .hljs-formula,
+.tex .hljs-formula *
+{
+  color: #bb1166;
+}
+
+.hljs-yardoctag,
+.hljs-phpdoc,
+.profile .hljs-header,
+.ini .hljs-title,
+.apache .hljs-tag,
+.parser3 .hljs-title
+{
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata
+{
+  opacity: 0.6;
+}
+
+.hljs,
+.javascript,
+.css,
+.xml,
+.hljs-subst,
+.diff .hljs-chunk,
+.css .hljs-value,
+.css .hljs-attribute,
+.lisp .hljs-string,
+.lisp .hljs-number,
+.tail .hljs-params,
+.hljs-container,
+.haskell *,
+.erlang *,
+.erlang_repl *
+{
+  color: #aaa;
+}
+}
+.hl-s-monokai {
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #272822;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-keyword,
+.hljs-literal,
+.hljs-strong,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special {
+  color: #F92672;
+}
+
+.hljs {
+  color: #DDD;
+}
+
+.hljs .hljs-constant,
+.asciidoc .hljs-code {
+	color: #66D9EF;
+}
+
+.hljs-code,
+.hljs-class .hljs-title,
+.hljs-header {
+	color: white;
+}
+
+.hljs-link_label,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-value,
+.hljs-regexp {
+	color: #BF79DB;
+}
+
+.hljs-link_url,
+.hljs-tag .hljs-value,
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-emphasis,
+.haskell .hljs-type,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt {
+  color: #A6E22E;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.smartquote,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715E;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.hljs-header,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-special,
+.hljs-request,
+.hljs-status {
+  font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-monokai_sublime {
+/*
+
+Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #23241f;
+}
+
+.hljs,
+.hljs-tag,
+.css .hljs-rules,
+.css .hljs-value,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2;
+}
+
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2;
+}
+
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff;
+}
+
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e;
+}
+
+.hljs-link_url {
+  font-size: 80%;
+}
+
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold;
+}
+
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child {
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #F92672;
+}
+
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-constant,
+.css .hljs-attribute {
+  color: #66d9ef;
+}
+
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2;
+}
+
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.haskell .hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74;
+}
+
+.hljs-comment,
+.hljs-javadoc,
+.java .hljs-annotation,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 0.5;
+}
+}
+.hl-s-xcode {
+/*
+
+XCode style (c) Angel Garcia <angelgarcia.mail@gmail.com>
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #fff; color: black;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc,
+.hljs-comment * {
+  color: #006a00;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.nginx .hljs-title {
+  color: #aa0d91;
+}
+.method,
+.hljs-list .hljs-title,
+.hljs-tag .hljs-title,
+.setting .hljs-value,
+.hljs-winutils,
+.tex .hljs-command,
+.http .hljs-title,
+.hljs-request,
+.hljs-status {
+  color: #008;
+}
+
+.hljs-envvar,
+.tex .hljs-special {
+  color: #660;
+}
+
+.hljs-string {
+  color: #c41a16;
+}
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.hljs-regexp {
+  color: #080;
+}
+
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-decorator,
+.ini .hljs-title,
+.hljs-shebang,
+.hljs-prompt,
+.hljs-hexcolor,
+.hljs-rules .hljs-value,
+.css .hljs-value .hljs-number,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-number,
+.css .hljs-function,
+.clojure .hljs-title,
+.clojure .hljs-built_in,
+.hljs-function .hljs-title,
+.coffeescript .hljs-attribute {
+  color: #1c00cf;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc,
+.hljs-typename,
+.hljs-tag .hljs-attribute,
+.hljs-doctype,
+.hljs-class .hljs-id,
+.hljs-built_in,
+.setting,
+.hljs-params,
+.clojure .hljs-attribute {
+  color: #5c2699;
+}
+
+.hljs-variable {
+ color: #3f6e74;
+}
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.hljs-subst {
+  color: #000;
+}
+
+.css .hljs-class,
+.css .hljs-id {
+  color: #9B703F;
+}
+
+.hljs-value .hljs-important {
+  color: #ff7700;
+  font-weight: bold;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #C5AF75;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9B859D;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma {
+  color: #643820;
+}
+
+.tex .hljs-formula {
+  background-color: #EEE;
+  font-style: italic;
+}
+
+.diff .hljs-header,
+.hljs-chunk {
+  color: #808080;
+  font-weight: bold;
+}
+
+.diff .hljs-change {
+  background-color: #BCCFF9;
+}
+
+.hljs-addition {
+  background-color: #BAEEBA;
+}
+
+.hljs-deletion {
+  background-color: #FFC8BD;
+}
+
+.hljs-comment .hljs-yardoctag {
+  font-weight: bold;
+}
+
+.method .hljs-id {
+  color: #000;
+}
+}
+.hl-s-pojoaque {
+/*
+
+Pojoaque Style by Jason Tate
+http://web-cms-designs.com/ftopict-10-pojoaque-style-for-highlight-js-code-highlighter.html
+Based on Solarized Style from http://ethanschoonover.com/solarized
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #DCCF8F;
+  background: url(./pojoaque.jpg) repeat scroll left top #181914;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-doctype,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #586e75;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.method,
+.hljs-addition,
+.css .hljs-tag,
+.clojure .hljs-title,
+.nginx .hljs-title {
+  color: #B64926;
+}
+
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor {
+  color: #468966;
+}
+
+.hljs-title,
+.hljs-localvars,
+.hljs-function .hljs-title,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.hljs-identifier,
+.hljs-id {
+  color: #FFB03B;
+}
+
+.hljs-attribute,
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.haskell .hljs-type {
+  color: #b58900;
+}
+
+.css .hljs-attribute {
+  color: #b89859;
+}
+
+.css .hljs-number,
+.css .hljs-hexcolor {
+  color: #DCCF8F;
+}
+
+.css .hljs-class {
+  color: #d3a60c;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-important,
+.hljs-subst,
+.hljs-cdata {
+  color: #cb4b16;
+}
+
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.tex .hljs-formula {
+  background: #073642;
+}
+}
+.hl-s-rainbow {
+/*
+
+Style with support for rainbow parens
+
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #474949; color: #D1D9E1;
+}
+
+
+.hljs-body,
+.hljs-collection {
+   color: #D1D9E1;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-doctype,
+.lisp .hljs-string,
+.hljs-javadoc {
+  color: #969896;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.clojure .hljs-attribute,
+.hljs-winutils,
+.javascript .hljs-title,
+.hljs-addition,
+.css .hljs-tag {
+  color: #cc99cc;
+}
+
+.hljs-number { color: #f99157; }
+
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula,
+.hljs-regexp,
+.hljs-hexcolor {
+  color: #8abeb7;
+}
+
+.hljs-title,
+.hljs-localvars,
+.hljs-function .hljs-title,
+.hljs-chunk,
+.hljs-decorator,
+.hljs-built_in,
+.lisp .hljs-title,
+.hljs-identifier
+{
+  color: #b5bd68;
+}
+
+.hljs-class .hljs-keyword
+{
+  color: #f2777a;
+}
+
+.hljs-variable,
+.lisp .hljs-body,
+.smalltalk .hljs-number,
+.hljs-constant,
+.hljs-class .hljs-title,
+.hljs-parent,
+.haskell .hljs-label,
+.hljs-id,
+.lisp .hljs-title,
+.clojure .hljs-title .hljs-built_in {
+   color: #ffcc66;
+}
+
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword,
+.clojure .hljs-title .hljs-built_in {
+  font-weight: bold;
+}
+
+.hljs-attribute,
+.clojure .hljs-title {
+  color: #81a2be;
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-shebang,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.diff .hljs-change,
+.hljs-special,
+.hljs-attr_selector,
+.hljs-important,
+.hljs-subst,
+.hljs-cdata {
+  color: #f99157;
+}
+
+.hljs-deletion {
+  color: #dc322f;
+}
+
+.tex .hljs-formula {
+  background: #eee8d5;
+}
+}
+.hl-s-tomorrow {
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #718c00;
+}
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #3e999f;
+}
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #8959a8;
+}
+
+.hljs {
+  display: block;
+  background: white;
+  color: #4d4d4c;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-tomorrow-night {
+/* Tomorrow Night Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #cc6666;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #de935f;
+}
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #f0c674;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #b5bd68;
+}
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #8abeb7;
+}
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #81a2be;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #b294bb;
+}
+
+.hljs {
+  display: block;
+  background: #1d1f21;
+  color: #c5c8c6;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-tomorrow-night-bright {
+/* Tomorrow Night Bright Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #969896;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d54e53;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #e78c45;
+}
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #e7c547;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #b9ca4a;
+}
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #70c0b1;
+}
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #7aa6da;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #c397d8;
+}
+
+.hljs {
+  display: block;
+  background: black;
+  color: #eaeaea;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-tomorrow-night-blue {
+/* Tomorrow Night Blue Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #7285b7;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ff9da4;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #ffc58f;
+}
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #ffeead;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #d1f1a9;
+}
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #99ffff;
+}
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #bbdaff;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #ebbbff;
+}
+
+.hljs {
+  display: block;
+  background: #002451;
+  color: white;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-tomorrow-night-eighties {
+/* Tomorrow Night Eighties Theme */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-title {
+  color: #999999;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #f2777a;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f99157;
+}
+
+/* Tomorrow Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #ffcc66;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #99cc99;
+}
+
+/* Tomorrow Aqua */
+.css .hljs-hexcolor {
+  color: #66cccc;
+}
+
+/* Tomorrow Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #6699cc;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #cc99cc;
+}
+
+.hljs {
+  display: block;
+  background: #2d2d2d;
+  color: #cccccc;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-railscasts {
+/*
+
+Railscasts-like style (c) Visoft, Inc. (Damien White)
+
+*/
+
+.hljs {
+  display: block;
+  padding: 0.5em;
+  background: #232323;
+  color: #E6E1DC;
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.hljs-javadoc,
+.hljs-shebang {
+  color: #BC9458;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.ruby .hljs-function .hljs-keyword,
+.hljs-request,
+.hljs-status,
+.nginx .hljs-title,
+.method,
+.hljs-list .hljs-title {
+  color: #C26230;
+}
+
+.hljs-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-tag .hljs-value,
+.hljs-cdata,
+.hljs-filter .hljs-argument,
+.hljs-attr_selector,
+.apache .hljs-cbracket,
+.hljs-date,
+.tex .hljs-command,
+.markdown .hljs-link_label {
+  color: #A5C261;
+}
+
+.hljs-subst {
+  color: #519F50;
+}
+
+.hljs-tag,
+.hljs-tag .hljs-keyword,
+.hljs-tag .hljs-title,
+.hljs-doctype,
+.hljs-sub .hljs-identifier,
+.hljs-pi,
+.input_number {
+  color: #E8BF6A;
+}
+
+.hljs-identifier {
+  color: #D0D0FF;
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-type,
+.smalltalk .hljs-class,
+.hljs-javadoctag,
+.hljs-yardoctag,
+.hljs-phpdoc {
+  text-decoration: none;
+}
+
+.hljs-constant {
+  color: #DA4939;
+}
+
+
+.hljs-symbol,
+.hljs-built_in,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-symbol .hljs-identifier,
+.markdown .hljs-link_url,
+.hljs-attribute {
+  color: #6D9CBE;
+}
+
+.markdown .hljs-link_url {
+  text-decoration: underline;
+}
+
+
+
+.hljs-params,
+.hljs-variable,
+.clojure .hljs-attribute {
+  color: #D0D0FF;
+}
+
+.css .hljs-tag,
+.hljs-rules .hljs-property,
+.hljs-pseudo,
+.tex .hljs-special {
+  color: #CDA869;
+}
+
+.css .hljs-class {
+  color: #9B703F;
+}
+
+.hljs-rules .hljs-keyword {
+  color: #C5AF75;
+}
+
+.hljs-rules .hljs-value {
+  color: #CF6A4C;
+}
+
+.css .hljs-id {
+  color: #8B98AB;
+}
+
+.hljs-annotation,
+.apache .hljs-sqbracket,
+.nginx .hljs-built_in {
+  color: #9B859D;
+}
+
+.hljs-preprocessor,
+.hljs-preprocessor *,
+.hljs-pragma {
+  color: #8996A8 !important;
+}
+
+.hljs-hexcolor,
+.css .hljs-value .hljs-number {
+  color: #A5C261;
+}
+
+.hljs-title,
+.hljs-decorator,
+.css .hljs-function {
+  color: #FFC66D;
+}
+
+.diff .hljs-header,
+.hljs-chunk {
+  background-color: #2F33AB;
+  color: #E6E1DC;
+  display: inline-block;
+  width: 100%;
+}
+
+.diff .hljs-change {
+  background-color: #4A410D;
+  color: #F8F8F8;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-addition {
+  background-color: #144212;
+  color: #E6E1DC;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #600;
+  color: #E6E1DC;
+  display: inline-block;
+  width: 100%;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.7;
+}
+}
+.hl-s-obsidian {
+/**
+ * Obsidian style
+ * ported by Alexander Marenin (http://github.com/ioncreature)
+ */
+
+.hljs {
+    display: block; padding: 0.5em;
+    background: #282B2E;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.lisp .hljs-title,
+.clojure .hljs-built_in,
+.nginx .hljs-title,
+.css .hljs-id,
+.tex .hljs-special {
+    color: #93C763;
+}
+
+.hljs-number {
+    color: #FFCD22;
+}
+
+.hljs {
+    color: #E0E2E4;
+}
+
+.css .hljs-tag,
+.css .hljs-pseudo {
+    color: #D0D2B5;
+}
+
+.hljs-attribute,
+.hljs .hljs-constant {
+    color: #668BB0;
+}
+
+.xml .hljs-attribute {
+    color: #B3B689;
+}
+
+.xml .hljs-tag .hljs-value {
+    color: #E8E2B7;
+}
+
+.hljs-code,
+.hljs-class .hljs-title,
+.hljs-header {
+    color: white;
+}
+
+.hljs-class,
+.hljs-hexcolor {
+    color: #93C763;
+}
+
+.hljs-regexp {
+    color: #D39745;
+}
+
+.hljs-at_rule,
+.hljs-at_rule .hljs-keyword {
+    color: #A082BD;
+}
+
+.hljs-doctype {
+    color: #557182;
+}
+
+.hljs-link_url,
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-bullet,
+.hljs-subst,
+.hljs-emphasis,
+.haskell .hljs-type,
+.hljs-preprocessor,
+.hljs-pragma,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.sql .hljs-aggregate,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.hljs-javadoc,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt {
+    color: #8CBBAD;
+}
+
+.hljs-string {
+    color: #EC7600;
+}
+
+.hljs-comment,
+.java .hljs-annotation,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.python .hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+    color: #818E96;
+}
+
+.hljs-keyword,
+.hljs-literal,
+.css .hljs-id,
+.hljs-phpdoc,
+.hljs-title,
+.hljs-header,
+.haskell .hljs-type,
+.vbscript .hljs-built_in,
+.sql .hljs-aggregate,
+.rsl .hljs-built_in,
+.smalltalk .hljs-class,
+.diff .hljs-header,
+.hljs-chunk,
+.hljs-winutils,
+.bash .hljs-variable,
+.apache .hljs-tag,
+.tex .hljs-special,
+.hljs-request,
+.hljs-at_rule .hljs-keyword,
+.hljs-status {
+    font-weight: bold;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+    opacity: 0.5;
+}
+}
+.hl-s-docco {
+/*
+Docco style used in http://jashkenas.github.com/docco/ converted by Simon Madine (@thingsinjars)
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  color: #000;
+  background: #f8f8ff
+}
+
+.hljs-comment,
+.hljs-template_comment,
+.diff .hljs-header,
+.hljs-javadoc {
+  color: #408080;
+  font-style: italic
+}
+
+.hljs-keyword,
+.assignment,
+.hljs-literal,
+.css .rule .hljs-keyword,
+.hljs-winutils,
+.javascript .hljs-title,
+.lisp .hljs-title,
+.hljs-subst {
+  color: #954121;
+}
+
+.hljs-number,
+.hljs-hexcolor {
+  color: #40a070
+}
+
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-phpdoc,
+.tex .hljs-formula {
+  color: #219161;
+}
+
+.hljs-title,
+.hljs-id {
+  color: #19469D;
+}
+.hljs-params {
+  color: #00F;
+}
+
+.javascript .hljs-title,
+.lisp .hljs-title,
+.hljs-subst {
+  font-weight: normal
+}
+
+.hljs-class .hljs-title,
+.haskell .hljs-label,
+.tex .hljs-command {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-tag,
+.hljs-tag .hljs-title,
+.hljs-rules .hljs-property,
+.django .hljs-tag .hljs-keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+.hljs-attribute,
+.hljs-variable,
+.instancevar,
+.lisp .hljs-body {
+  color: #008080
+}
+
+.hljs-regexp {
+  color: #B68
+}
+
+.hljs-class {
+  color: #458;
+  font-weight: bold
+}
+
+.hljs-symbol,
+.ruby .hljs-symbol .hljs-string,
+.ruby .hljs-symbol .hljs-keyword,
+.ruby .hljs-symbol .keymethods,
+.lisp .hljs-keyword,
+.tex .hljs-special,
+.input_number {
+  color: #990073
+}
+
+.builtin,
+.constructor,
+.hljs-built_in,
+.lisp .hljs-title {
+  color: #0086b3
+}
+
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-doctype,
+.hljs-shebang,
+.hljs-cdata {
+  color: #999;
+  font-weight: bold
+}
+
+.hljs-deletion {
+  background: #fdd
+}
+
+.hljs-addition {
+  background: #dfd
+}
+
+.diff .hljs-change {
+  background: #0086b3
+}
+
+.hljs-chunk {
+  color: #aaa
+}
+
+.tex .hljs-formula {
+  opacity: 0.5;
+}
+}
+.hl-s-mono-blue {
+/*
+  Five-color theme from a single blue hue.
+*/
+.hljs {
+  display: block; padding: 0.5em;
+  background: #EAEEF3; color: #00193A;
+}
+
+.hljs-keyword,
+.hljs-title,
+.hljs-important,
+.hljs-request,
+.hljs-header,
+.hljs-javadoctag {
+  font-weight: bold;
+}
+
+.hljs-comment,
+.hljs-chunk,
+.hljs-template_comment {
+  color: #738191;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-parent,
+.hljs-built_in,
+.hljs-literal,
+.hljs-filename,
+.hljs-value,
+.hljs-addition,
+.hljs-tag,
+.hljs-argument,
+.hljs-link_label,
+.hljs-blockquote,
+.hljs-header {
+  color: #0048AB;
+}
+
+.hljs-decorator,
+.hljs-prompt,
+.hljs-yardoctag,
+.hljs-subst,
+.hljs-symbol,
+.hljs-doctype,
+.hljs-regexp,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-pi,
+.hljs-attribute,
+.hljs-attr_selector,
+.hljs-javadoc,
+.hljs-xmlDocTag,
+.hljs-deletion,
+.hljs-shebang,
+.hljs-string .hljs-variable,
+.hljs-link_url,
+.hljs-bullet,
+.hljs-sqbracket,
+.hljs-phony {
+  color: #4C81C9;
+}
+}
+.hl-s-foundation {
+/*
+Description: Foundation 4 docs style for highlight.js
+Author: Dan Allen <dan.j.allen@gmail.com>
+Website: http://foundation.zurb.com/docs/
+Version: 1.0
+Date: 2013-04-02
+*/
+
+.hljs {
+  display: block; padding: 0.5em;
+  background: #eee;
+}
+
+.hljs-header,
+.hljs-decorator,
+.hljs-annotation {
+  color: #000077;
+}
+
+.hljs-horizontal_rule,
+.hljs-link_url,
+.hljs-emphasis,
+.hljs-attribute {
+  color: #070;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-link_label,
+.hljs-strong,
+.hljs-value,
+.hljs-string,
+.scss .hljs-value .hljs-string {
+  color: #d14;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+.hljs-blockquote,
+.hljs-comment {
+  color: #998;
+  font-style: italic;
+}
+
+.asciidoc .hljs-title,
+.hljs-function .hljs-title {
+  color: #900;
+}
+
+.hljs-class {
+  color: #458;
+}
+
+.hljs-id,
+.hljs-pseudo,
+.hljs-constant,
+.hljs-hexcolor {
+  color: teal;
+}
+
+.hljs-variable {
+  color: #336699;
+}
+
+.hljs-bullet,
+.hljs-javadoc {
+  color: #997700;
+}
+
+.hljs-pi,
+.hljs-doctype {
+  color: #3344bb;
+}
+
+.hljs-code,
+.hljs-number {
+  color: #099;
+}
+
+.hljs-important {
+  color: #f00;
+}
+
+.smartquote,
+.hljs-label {
+  color: #970;
+}
+
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #579;
+}
+
+.hljs-reserved,
+.hljs-keyword,
+.scss .hljs-value {
+  color: #000;
+}
+
+.hljs-regexp {
+  background-color: #fff0ff;
+  color: #880088;
+}
+
+.hljs-symbol {
+  color: #990073;
+}
+
+.hljs-symbol .hljs-string {
+  color: #a60;
+}
+
+.hljs-tag {
+  color: #007700;
+}
+
+.hljs-at_rule,
+.hljs-at_rule .hljs-keyword {
+  color: #088;
+}
+
+.hljs-at_rule .hljs-preprocessor {
+  color: #808;
+}
+
+.scss .hljs-tag,
+.scss .hljs-attribute {
+  color: #339;
+}
+}
+.hl-s-atelier-dune-dark {
+/* Base16 Atelier Dune Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Dune Dark Comment */
+.hljs-comment,
+.hljs-title {
+  color: #999580;
+}
+
+/* Atelier Dune Dark Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d73737;
+}
+
+/* Atelier Dune Dark Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #b65611;
+}
+
+/* Atelier Dune Dark Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #cfb017;
+}
+
+/* Atelier Dune Dark Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #60ac39;
+}
+
+/* Atelier Dune Dark Aqua */
+.css .hljs-hexcolor {
+  color: #1fad83;
+}
+
+/* Atelier Dune Dark Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #6684e1;
+}
+
+/* Atelier Dune Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #b854d4;
+}
+
+.hljs {
+  display: block;
+  background: #292824;
+  color: #a6a28c;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-dune-light {
+/* Base16 Atelier Dune Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Dune Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #7d7a68;
+}
+
+/* Atelier Dune Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d73737;
+}
+
+/* Atelier Dune Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #b65611;
+}
+
+/* Atelier Dune Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #cfb017;
+}
+
+/* Atelier Dune Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #60ac39;
+}
+
+/* Atelier Dune Light Aqua */
+.css .hljs-hexcolor {
+  color: #1fad83;
+}
+
+/* Atelier Dune Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #6684e1;
+}
+
+/* Atelier Dune Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #b854d4;
+}
+
+.hljs {
+  display: block;
+  background: #fefbec;
+  color: #6e6b5e;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-forest-dark {
+/* Base16 Atelier Forest Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Forest Dark Comment */
+.hljs-comment,
+.hljs-title {
+  color: #9c9491;
+}
+
+/* Atelier Forest Dark Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #f22c40;
+}
+
+/* Atelier Forest Dark Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #df5320;
+}
+
+/* Atelier Forest Dark Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #d5911a;
+}
+
+/* Atelier Forest Dark Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #5ab738;
+}
+
+/* Atelier Forest Dark Aqua */
+.css .hljs-hexcolor {
+  color: #00ad9c;
+}
+
+/* Atelier Forest Dark Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #407ee7;
+}
+
+/* Atelier Forest Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #6666ea;
+}
+
+.hljs {
+  display: block;
+  background: #2c2421;
+  color: #a8a19f;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-forest-light {
+/* Base16 Atelier Forest Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Forest Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #766e6b;
+}
+
+/* Atelier Forest Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #f22c40;
+}
+
+/* Atelier Forest Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #df5320;
+}
+
+/* Atelier Forest Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #d5911a;
+}
+
+/* Atelier Forest Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #5ab738;
+}
+
+/* Atelier Forest Light Aqua */
+.css .hljs-hexcolor {
+  color: #00ad9c;
+}
+
+/* Atelier Forest Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #407ee7;
+}
+
+/* Atelier Forest Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #6666ea;
+}
+
+.hljs {
+  display: block;
+  background: #f1efee;
+  color: #68615e;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-heath-dark {
+/* Base16 Atelier Heath Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Heath Dark Comment */
+.hljs-comment,
+.hljs-title {
+  color: #9e8f9e;
+}
+
+/* Atelier Heath Dark Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ca402b;
+}
+
+/* Atelier Heath Dark Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #a65926;
+}
+
+/* Atelier Heath Dark Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #bb8a35;
+}
+
+/* Atelier Heath Dark Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #379a37;
+}
+
+/* Atelier Heath Dark Aqua */
+.css .hljs-hexcolor {
+  color: #159393;
+}
+
+/* Atelier Heath Dark Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #516aec;
+}
+
+/* Atelier Heath Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #7b59c0;
+}
+
+.hljs {
+  display: block;
+  background: #292329;
+  color: #ab9bab;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-heath-light {
+/* Base16 Atelier Heath Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Heath Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #776977;
+}
+
+/* Atelier Heath Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ca402b;
+}
+
+/* Atelier Heath Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #a65926;
+}
+
+/* Atelier Heath Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #bb8a35;
+}
+
+/* Atelier Heath Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #379a37;
+}
+
+/* Atelier Heath Light Aqua */
+.css .hljs-hexcolor {
+  color: #159393;
+}
+
+/* Atelier Heath Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #516aec;
+}
+
+/* Atelier Heath Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #7b59c0;
+}
+
+.hljs {
+  display: block;
+  background: #f7f3f7;
+  color: #695d69;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-lakeside-dark {
+/* Base16 Atelier Lakeside Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Lakeside Dark Comment */
+.hljs-comment,
+.hljs-title {
+  color: #7195a8;
+}
+
+/* Atelier Lakeside Dark Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d22d72;
+}
+
+/* Atelier Lakeside Dark Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #935c25;
+}
+
+/* Atelier Lakeside Dark Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #8a8a0f;
+}
+
+/* Atelier Lakeside Dark Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #568c3b;
+}
+
+/* Atelier Lakeside Dark Aqua */
+.css .hljs-hexcolor {
+  color: #2d8f6f;
+}
+
+/* Atelier Lakeside Dark Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #257fad;
+}
+
+/* Atelier Lakeside Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #5d5db1;
+}
+
+.hljs {
+  display: block;
+  background: #1f292e;
+  color: #7ea2b4;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-lakeside-light {
+/* Base16 Atelier Lakeside Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/lakeside/) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Lakeside Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #5a7b8c;
+}
+
+/* Atelier Lakeside Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #d22d72;
+}
+
+/* Atelier Lakeside Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #935c25;
+}
+
+/* Atelier Lakeside Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #8a8a0f;
+}
+
+/* Atelier Lakeside Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #568c3b;
+}
+
+/* Atelier Lakeside Light Aqua */
+.css .hljs-hexcolor {
+  color: #2d8f6f;
+}
+
+/* Atelier Lakeside Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #257fad;
+}
+
+/* Atelier Lakeside Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #5d5db1;
+}
+
+.hljs {
+  display: block;
+  background: #ebf8ff;
+  color: #516d7b;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-seaside-dark {
+/* Base16 Atelier Seaside Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/seaside/) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Seaside Dark Comment */
+.hljs-comment,
+.hljs-title {
+  color: #809980;
+}
+
+/* Atelier Seaside Dark Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #e6193c;
+}
+
+/* Atelier Seaside Dark Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #87711d;
+}
+
+/* Atelier Seaside Dark Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #c3c322;
+}
+
+/* Atelier Seaside Dark Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #29a329;
+}
+
+/* Atelier Seaside Dark Aqua */
+.css .hljs-hexcolor {
+  color: #1999b3;
+}
+
+/* Atelier Seaside Dark Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #3d62f5;
+}
+
+/* Atelier Seaside Dark Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #ad2bee;
+}
+
+.hljs {
+  display: block;
+  background: #242924;
+  color: #8ca68c;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-atelier-seaside-light {
+/* Base16 Atelier Seaside Light - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/seaside/) */ 
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+/* https://github.com/jmblog/color-themes-for-highlightjs */
+
+/* Atelier Seaside Light Comment */
+.hljs-comment,
+.hljs-title {
+  color: #687d68;
+}
+
+/* Atelier Seaside Light Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #e6193c;
+}
+
+/* Atelier Seaside Light Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-pragma,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #87711d;
+}
+
+/* Atelier Seaside Light Yellow */
+.hljs-ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #c3c322;
+}
+
+/* Atelier Seaside Light Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #29a329;
+}
+
+/* Atelier Seaside Light Aqua */
+.css .hljs-hexcolor {
+  color: #1999b3;
+}
+
+/* Atelier Seaside Light Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #3d62f5;
+}
+
+/* Atelier Seaside Light Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #ad2bee;
+}
+
+.hljs {
+  display: block;
+  background: #f0fff0;
+  color: #5e6e5e;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-paraiso-dark {
+/*
+    Paraíso (dark)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+
+/* Paraíso Comment */
+.hljs-comment,
+.hljs-title {
+  color: #8d8687;
+}
+
+/* Paraíso Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ef6155;
+}
+
+/* Paraíso Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f99b15;
+}
+
+/* Paraíso Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #fec418;
+}
+
+/* Paraíso Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #48b685;
+}
+
+/* Paraíso Aqua */
+.css .hljs-hexcolor {
+  color: #5bc4bf;
+}
+
+/* Paraíso Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #06b6ef;
+}
+
+/* Paraíso Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #815ba4;
+}
+
+.hljs {
+  display: block;
+  background: #2f1e2e;
+  color: #a39e9b;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}
+.hl-s-paraiso-light {
+/*
+    Paraíso (light)
+    Created by Jan T. Sott (http://github.com/idleberg)
+    Inspired by the art of Rubens LP (http://www.rubenslp.com.br)
+*/
+
+/* Paraíso Comment */
+.hljs-comment,
+.hljs-title {
+  color: #776e71;
+}
+
+/* Paraíso Red */
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .hljs-constant,
+.xml .hljs-tag .hljs-title,
+.xml .hljs-pi,
+.xml .hljs-doctype,
+.html .hljs-doctype,
+.css .hljs-id,
+.css .hljs-class,
+.css .hljs-pseudo {
+  color: #ef6155;
+}
+
+/* Paraíso Orange */
+.hljs-number,
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-params,
+.hljs-constant {
+  color: #f99b15;
+}
+
+/* Paraíso Yellow */
+.ruby .hljs-class .hljs-title,
+.css .hljs-rules .hljs-attribute {
+  color: #fec418;
+}
+
+/* Paraíso Green */
+.hljs-string,
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .hljs-symbol,
+.xml .hljs-cdata {
+  color: #48b685;
+}
+
+/* Paraíso Aqua */
+.css .hljs-hexcolor {
+  color: #5bc4bf;
+}
+
+/* Paraíso Blue */
+.hljs-function,
+.python .hljs-decorator,
+.python .hljs-title,
+.ruby .hljs-function .hljs-title,
+.ruby .hljs-title .hljs-keyword,
+.perl .hljs-sub,
+.javascript .hljs-title,
+.coffeescript .hljs-title {
+  color: #06b6ef;
+}
+
+/* Paraíso Purple */
+.hljs-keyword,
+.javascript .hljs-function {
+  color: #815ba4;
+}
+
+.hljs {
+  display: block;
+  background: #e7e9db;
+  color: #4f424c;
+  padding: 0.5em;
+}
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata {
+  opacity: 0.5;
+}
+}

@@ -1,0 +1,89 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+body {
+  background: #353433;
+  font: 25px Helvetica, sans-serif;
+  color: #e9e8e7;
+  text-align: center;
+  padding: 0;
+}
+h1 {
+  margin: 0.3em 0 0;
+  line-height: 1.5;
+}
+h1 small {
+  display: block;
+  font-weight: normal;
+  font-size: 0.5em;
+}
+.pre-container {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  margin: 1em 0 4em;
+}
+pre {
+  margin: 0;
+}
+.box {
+  background: #454443;
+  border-bottom: 3px solid black;
+  padding: 2px 0.5em;
+  font-size: 16px;
+}
+.box a {
+  display: inline-block;
+  margin: 0px 0 2px 2px;
+  background: #353433;
+  padding: 0.3em 0.4em;
+  color: #e9e8e7;
+  text-decoration: none;
+}
+.box a.active {
+  background: #e9e8e7;
+  color: #090807;
+}
+pre.hljs.hljs.hljs.hljs {
+  font-size: 18px !important;
+  line-height: 1.1 !important;
+  margin: 0 !important;
+  padding: 7px !important;
+  border-radius: 6px;
+  font-family: Source Code Pro, Menlo, Consolas, monospace !important;
+}
+p.instructions {
+  background: black;
+  margin: 0.6em 0 0;
+  padding: 1em;
+}
+p.first.instructions {
+  position: relative;
+  margin-top: 1.5em;
+  padding: 2em 1em;
+}
+
+.meow {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  overflow: hidden;
+}
+.meow .text {
+  top: 50%; left: 50%;
+  position: absolute;
+  font: bold 100px Helvetica;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.footer {
+  text-align: center;
+}
+.footer, .footer a {
+  color: #8b8685;
+  text-decoration: none;
+}
+.the-dot {
+  position: relative;
+  top: -1.15ex; }

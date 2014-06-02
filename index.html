@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Syntax Highlighter</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css.css">
+  <link rel="stylesheet" href="styles/all.css">
+</head>
+<body>
+
+  <h1>Quick Syntax Highlighter <small>works with Google Docs — please use Google Chrome</small></h1>
+
+  <script src="https://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+  <script src="styles/index.js"></script>
+
+  <p id="first" class="first instructions">
+    Please paste some code!
+    <div class="meow" style="display: none">
+      <div class="text">meow</div>
+    </div>
+  </p>
+
+  <div id="second" style="display: none">
+    <p id="text" class="second instructions">Customize and copy!</p>
+    <div class="box" id="langs">
+      <strong>Language: </strong>
+    </div>
+    <div class="box" id="styles">
+      <strong>Style: </strong>
+    </div>
+    <div class="pre-container hl-s-default" id="pre-container">
+      <pre class="hljs"></pre>
+    </div>
+  </div>
+
+  <script>
+    
+    var get = function(sel) {
+      return document.querySelector(sel)
+    }
+
+    var pre = document.querySelector('pre.hljs')
+
+    var controller = function(sel) {
+      var container = get(sel)
+      var active = null
+      var selected = null
+      var hovered = null
+      var actions = { }
+      var elements = { }
+      function update() {
+        var current = hovered || selected
+        if (current != active) {
+          if (elements[active]) elements[active].className = ''
+          actions[current]()
+          active = current
+          if (elements[active]) elements[active].className = 'active'
+        }
+      }
+      var out = {
+        add: function(text, id, callback) {
+          var a = document.createElement('a')
+          a.href = 'javascript://'
+          a.innerHTML = text
+          a.onclick = function() {
+            out.select(id)
+          }
+          a.onmouseover = function() {
+            hovered = id
+            update()
+          }
+          a.onmouseout = function() {
+            hovered = null
+            update()
+          }
+          container.appendChild(a)
+          actions[id] = callback
+          elements[id] = a
+        },
+        select: function(c) {
+          selected = c
+          update()
+        }
+      }
+      return out
+    }
+
+    var ctx = {
+      code: null,
+      lang: 'auto'
+    }
+
+    var go = function() {
+
+      get('.meow').style.display = 'block'
+      setTimeout(function() {
+        get('.meow').style.display = 'none'
+        get('#first').style.display = 'none'
+        get('#second').style.display = 'block'
+        get('#pre-container').appendChild(get('.meow'))
+      }, 250)
+
+      var langs = ["auto", "bash", "cs", "ruby", "diff", "javascript", "xml", "markdown", "css", "http", "java", "php", "python", "sql", "ini", "perl", "objectivec", "coffeescript", "nginx", "json", "apache", "cpp", "makefile"]
+      var ctrl = controller('#langs')
+      langs.forEach(function(lang) {
+        ctrl.add(lang, lang, function() {
+          ctx.lang = lang
+          rehighlight()
+        })
+      })
+      ctrl.select('auto')
+
+      ctrl = controller('#styles')
+      HL_S.sort(function(a, b) {
+        return a.id < b.id ? -1 : 1
+      })
+      HL_S.forEach(function(style) {
+        ctrl.add(style.id, style.id, function() {
+          get('#pre-container').className = 'pre-container hl-s-' + style.id
+        })
+      })
+      ctrl.select('default')
+
+      document.oncopy = function(e) {
+        var spans = pre.querySelectorAll('span')
+        var old = pre.innerHTML
+        ;[].forEach.call(spans, function(span) {
+          var style = window.getComputedStyle(span, null)
+          var fw = style.fontWeight
+          var fs = style.fontStyle
+          var c = style.color
+          span.className = ''
+          span.removeAttribute('class')
+          span.style.fontWeight = fw
+          span.style.fontStyle = fs
+          span.style.color = c
+        })
+        var html = pre.innerHTML
+        var cl = window.getComputedStyle(pre, null).color
+        html = '<pre style="color:' + cl + '">' + html + '</pre>'
+        console.log(html)
+        e.clipboardData.setData('text/html', html)
+        e.clipboardData.setData('text/plain', ctx.code)
+        pre.innerHTML = old
+        e.preventDefault()
+        get('.meow').style.display = 'block'
+        setTimeout(function() {
+          get('.meow').style.display = 'none'
+        }, 250)
+      }
+
+      go = function() {
+      }
+
+    }
+
+    function rehighlight() {
+      var highlighted = ctx.lang == 'auto' ? hljs.highlightAuto(ctx.code) : hljs.highlight(ctx.lang, ctx.code)
+      pre.innerHTML = highlighted.value
+    }
+
+    function receiveCode(code) {
+      ctx.code = code
+      go()
+      rehighlight()
+    }
+
+    document.onpaste = function(e) {
+      var code = e.clipboardData.getData('text/plain')
+      e.preventDefault()
+      receiveCode(code)
+    }
+
+  </script>
+
+  <p class="footer">
+    Product of <a href="http://spacet.me">spacet<span class="the-dot">.</span>me Labs</a>.
+    Powered by <a href="http://highlightjs.org/">highlight.js</a>
+  </p>
+
+</body>
+</html>
